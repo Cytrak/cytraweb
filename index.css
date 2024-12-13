@@ -1,0 +1,44 @@
+body{
+  background: #111;
+  display: flex;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+$flame-height: 150px;
+$wick-height: 50px;
+$orange: #ff6a00;
+$orange-yellow: #ff9224;
+$dark: #2c2b39;
+$blue-dark: #30537d;
+$blue-light: #76daff;
+$yellow: #fbf348;
+$yellow-grey: #58523a;
+
+.candle{
+  width: 34px;
+  margin: 30px auto 0 auto;
+  position: relative;
+  height: 80%;
+  align-self: flex-end;
+  animation: blink .1s infinite;
+}
+.wick{
+  position: absolute;
+  width: 6px;
+  height: $wick-height;
+  background: #23161a;
+  top: $flame-height - 0.8*$wick-height;
+  left: 50%;
+  transform: translateX(-50%) skewX(2deg);
+  border-radius: 10%;
+  box-shadow: 0 0 2px 0px black;
+  &:before{
+    content: '';
+    position: absolute;
+    width: 0;
+    left: 50%;
+    }
